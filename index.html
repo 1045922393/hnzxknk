@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>还你在心口难开</title>
+    <title>害你在心口难开</title>
     <style>
-      .box {
-        width: 100vw;
-        height: 100vh;
-        line-height: 100vh;
-        text-align: center;
-      }
+        .box {
+            width: 100vw;
+            height: 100vh;
+            line-height: 100vh;
+            text-align: center;
+            font-size: 14em;
+            color: #234234
+        }
     </style>
-  </head>
-  <body>
-    <div class="box">好词</div>
-  </body>
+</head>
+
+<body>
+    <div class="box" onclick="change()">好词</div>
+</body>
+<script src="./word.js"></script>
+<script>
+    function change() {
+        const box = document.querySelector('.box');
+        box.innerText = words[Math.floor(Math.random() * (words.length + 1))]
+    }
+    change()
+</script>
+
 </html>
