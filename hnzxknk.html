@@ -22,13 +22,9 @@
     <div class="box" onclick="change()"></div>
   </body>
   <script src="./word.js"></script>
+  <script src="./fn.js"></script>
   <script>
-    function rndColor() {
-      var r = parseInt(Math.random() * 256);
-      var g = parseInt(Math.random() * 256);
-      var b = parseInt(Math.random() * 256);
-      return "rgb(" + r + "," + g + "," + b + ")";
-    }
+    word = Array.from(new Set(word));
     function change() {
       const box = document.querySelector(".box");
       box.innerText = word.splice(Math.floor(Math.random() * word.length), 1);

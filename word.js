@@ -1,4 +1,4 @@
-const word = [
+let word = [
   "拿出东西",
   "转头",
   "说谢谢",
