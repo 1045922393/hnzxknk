@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>害你在心口难开</title>
+    <style>
+      .box {
+        width: 100vw;
+        height: 100vh;
+        line-height: 100vh;
+        text-align: center;
+        font-size: 150px;
+        color: #fff;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box" onclick="change()"></div>
+  </body>
+  <script src="./word.js"></script>
+  <script>
+    function rndColor() {
+      var r = parseInt(Math.random() * 256);
+      var g = parseInt(Math.random() * 256);
+      var b = parseInt(Math.random() * 256);
+      return "rgb(" + r + "," + g + "," + b + ")";
+    }
+    function change() {
+      const box = document.querySelector(".box");
+      box.innerText = word.splice(Math.floor(Math.random() * word.length), 1);
+      box.style.background = rndColor();
+    }
+    change();
+  </script>
+</html>
